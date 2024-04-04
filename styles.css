@@ -358,19 +358,20 @@ Background color white
 .social-icons img {
   width: auto;
   height: 20px;
-  filter: grayscale(100%);
+  filter: grayscale(100%); /* Makes the image black and white */
 }
 
 /* Mobile Responsive Styles */
 
 @media only screen and (max-width: 768px) {
+  /* For screens that are 768px or smaller */
   .navbar a {
-    margin-right: 10px;
-    font-size: 14px;
+    margin-right: 10px; /* Adds space between the navbar items */
+    font-size: 14px; /* Font size for the navbar items */
   }
 
   .about .content {
-    flex-direction: column;
+    flex-direction: column; /* Stacks the items on top of each other */
     justify-content: center;
     align-items: center;
     max-width: 100%;
