@@ -1,0 +1,415 @@
+/* Initial CSS to remove padding and margin and to add font of your choice*/
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto Slab", serif;
+}
+
+/* When clicks on a navbar item, it smooths scrolling instead of jumping to the section*/
+html {
+  scroll-behavior: smooth;
+}
+
+/* Makes navbar background black transparent, makes it stick to the screen when we scroll down 
+and makes it fill the whole width of the screen*/
+.navbar {
+  position: fixed; /* Stick to the top of the screen */
+  top: 0;
+  left: 0;
+  width: 100%; /* Fill the whole width of the screen */
+  padding: 10px; /* Adds padding to the navbar */
+  z-index: 1000; /* Makes the navbar on top of everything */
+  transition: background-color 0.3s ease; /* Smooth transition when scrolling */
+}
+
+/* Makes the navbar item color white and removes the underline from the navbar items*/
+.navbar a {
+  color: white; /* White text color */
+  margin-right: 20px; /* Adds space between the navbar items */
+  text-decoration: none; /* Removes underline from the navbar items */
+}
+
+/* When hovering over the color changes to the one specified*/
+.navbar a:hover {
+  color: #ccc; /* Light grey color when hovering */
+  text-decoration: none; /* Removes underline when hovering */
+}
+
+/* CSS for when navbar gets scrolled then a transparent black background aoppears
+This is used with the javascript in this project
+*/
+.navbar.scrolled {
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Semi-black background when scrolled */
+}
+
+/* The flash animation when the site loads*/
+.main .header {
+  animation: fadeInAnimation ease 2s; /* Fades in the site */
+  animation-iteration-count: 1; /* Does not repeat */
+  animation-fill-mode: forwards; /* Stays at the end when animation is done */
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Makes sites text color white unless otherwise specified 
+and aligns text center as well 
+as makes the font 50px*/
+
+.main {
+  color: white;
+  text-align: center;
+  font: 50px;
+}
+
+/* Header section that makes the h1, p and buttons stack ontop of each other
+Makes the height 100% of the current device screen
+and you can change the background image here
+*/
+.header {
+  width: 100%;
+  height: 100vh;
+  background: url("yourbackground") center no-repeat;
+  background-color: #06062c; /* Remove this if you want to add your own background image */
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* Adds the typing animation and the font size for h1 and p tags*/
+.header .content h1 {
+  letter-spacing: 0.3rem;
+  font-size: 3.8rem;
+  font-weight: 400;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3.5s steps(15), blink 0.95s ease-in-out 3.5s infinite;
+  width: 18ch;
+  margin: auto;
+  border-right: 4px solid rgba(255, 255, 255, 1);
+}
+
+@keyframes typing {
+  60% {
+    width: 0ch;
+  }
+  100% {
+    width: 18ch;
+  }
+}
+@keyframes blink {
+  from {
+    border-right: 6px solid rgba(255, 255, 255, 0);
+  }
+  to {
+    border-right: 6px solid rgb(194, 194, 194);
+  }
+}
+
+/* Makes the buttons link tags have no decoration and the text color white */
+.buttons a {
+  text-decoration: none;
+  color: white;
+}
+
+/* The button styling to have a Purple outline
+Some padding for space
+Font size of the text
+Transition delay for the hover bounce effect
+*/
+button {
+  border: 2px solid rgb(168, 168, 168);
+  border-radius: 20px;
+  padding: 3px 10px;
+  font-size: large;
+  transition: 0.3s;
+  background-color: transparent;
+}
+
+/* When hovering a cursor pointer appears '
+and the button becomes a little smaller for bounce effect*/
+button:hover {
+  color: rgb(255, 255, 255);
+  transform: scale(0.9);
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+/* About Me Section */
+
+/* Font color changed to Black
+Stacks html items in a column and centered div
+Background color is light grey
+Height is 70% of the current device screen
+*/
+.about {
+  color: rgb(0, 0, 0);
+  height: 70vh;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e7e7e7;
+}
+
+/* Font size for h1 and p tags */
+.about h1 {
+  font-size: 3rem;
+}
+
+.about p {
+  font-size: 1.2rem;
+}
+
+/* Makes the text and profile image flex and aligns items in the center */
+.about .content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80%;
+  width: 80%;
+}
+
+/* Size for About me image and making it round*/
+.about .content .profile img {
+  max-width: 70%;
+  border-radius: 40px;
+}
+
+/* Experience Section */
+
+/* Background color is white 
+Text color black
+Text is centered
+*/
+.experience {
+  background-color: #fff;
+  color: black;
+  text-align: center;
+  padding: 50px 0;
+}
+
+/* Font size for h1 tag and adds space below*/
+.experience h1 {
+  font-size: 2em;
+  margin-bottom: 50px;
+}
+
+/* Makes the experience items flex and centers them */
+.experience-container {
+  display: flex;
+  justify-content: center;
+}
+
+/* Adds even spacing and make them uniform  */
+.experience-item {
+  width: calc(33.333% - 150px);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Image size and makes it so it doesnt go over the div size */
+.experience-item img {
+  max-width: 130px;
+  height: 90px;
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+
+/* Font size for h2 and p tags */
+.experience-item h2 {
+  font-size: 1.3em;
+  color: #333;
+  margin: 10px 0;
+}
+
+.experience-item p {
+  color: #666;
+  font-size: 0.9em;
+  line-height: 1.4;
+}
+
+/* Project Section */
+
+/* Background color is a gradient from top left to bottom right */
+.projects {
+  height: auto; /* Auto for Mobile Use*/
+  background: linear-gradient(to bottom right, #c5c5c5 10%, #1f1f1f 100%);
+  padding: 20px;
+}
+
+/* Font size for h1 tag and color white */
+.projects h1 {
+  color: white;
+  text-align: center;
+}
+
+/* Adds flex and spacing between the different projects*/
+.project-row {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+/* Project card styling and makes it in a grid like format */
+.project {
+  display: block;
+  width: 25%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  margin: 10px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  overflow: hidden;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease,
+    background-color 0.3s ease;
+  transform: scale(1);
+}
+
+/* Hover effect for the project card 
+and makes it have a bounce effect*/
+.project:hover {
+  transform: scale(0.95);
+  box-shadow: 0px 5px 65px rgba(255, 255, 255, 0.5);
+  background-color: rgba(209, 209, 209, 0.5);
+}
+
+/* Image size and border radius */
+.project img {
+  width: auto;
+  height: 180px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+/* Inner padding for the project text */
+.project p {
+  padding: 0 10px 20px;
+}
+
+/* Contact Section */
+
+/* Font color black
+Height taking 25% of the screen 
+display flex and centers the items 
+Background color white 
+*/
+.contact {
+  color: black;
+  padding: 20px;
+  height: 25vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+}
+
+.contact h1 {
+  font-size: 2.5rem;
+}
+
+/* Makes the content div smaller  */
+.contact .content {
+  height: 100%;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Social Icons Styles*/
+
+.social-icons {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin: 0 10px;
+  color: #333;
+}
+
+.social-icons img {
+  width: auto;
+  height: 20px;
+  filter: grayscale(100%);
+}
+
+/* Mobile Responsive Styles */
+
+@media only screen and (max-width: 768px) {
+  .navbar a {
+    margin-right: 10px;
+    font-size: 14px;
+  }
+
+  .about .content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+  }
+
+  .about .content .text,
+  .about .content .profile {
+    flex: none;
+    width: 100%;
+    margin-right: 0;
+    padding: 10px 5%;
+  }
+
+  .about .content .profile img {
+    max-width: 50%;
+    margin-bottom: 20px;
+  }
+
+  .experience-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .experience-item {
+    width: 90%;
+    margin: 20px 0;
+  }
+
+  .header .content h1 {
+    font-size: 2.5rem;
+  }
+
+  .project-row {
+    flex-direction: column;
+  }
+
+  .project {
+    width: 90%;
+  }
+
+  .projects {
+    height: auto;
+  }
+
+  .contact .content {
+    width: 90%;
+  }
+
+  .social-icons a {
+    margin: 0 5px;
+  }
+}

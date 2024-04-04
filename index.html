@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Website logo -->
+    <link rel="shortcut icon" type="image/jpg" href="favicon.ico" />
+    <!-- Website Name -->
+    <title>Your Name</title>
+  </head>
+  <body>
+    <section>
+    <!-- Navbar Section -->
+    <nav class="navbar">
+      <!-- Navbar Items-->
+      <a href="#main">Your Name</a>
+      <a href="#about-me">About Me</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </section>
+
+  <section>
+    <!-- Main Section -->
+    <div class="main" id="main">
+      <!-- Header Section -->
+      <div class="header">
+        <!-- Header Content -->
+        <div class="content">
+          <h1>Your Name</h1>
+          <!-- Your Name -->
+          <h3>Your Role</h3>
+          <!-- Role -->
+          <!-- Buttons -->
+          <div class="buttons">
+            <button>
+              <a href="#about-me">Learn More</a>
+            </button>
+
+            <button>
+              <a href="https://www.linkedin.com/">LinkedIn</a>
+              <!-- Your Linkedin -->
+            </button>
+
+            <button><a href="resume.pdf" target="_blank">Resume</a></button>
+            <!-- Your Resume -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <!-- About Me Section -->
+      <div class="about" id="about-me">
+        <!-- About me Content -->
+        <div class="content">
+          <!-- Profile Image -->
+          <div class="profile">
+            <img src="Square.jpg" alt="Profile Picture" />
+            <!-- Your Profile Image -->
+          </div>
+
+          <!-- About me Text -->
+          <div class="text">
+            <h1>About Me</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              <br /><br />
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            </p>
+            <!-- Button linking to your resume -->
+            <button><a href="resume.pdf" target="_blank">Resume</a></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+      <!-- Experience Section -->
+      <div class="experience" id="experience">
+        <h1>Experience</h1>
+        <!-- Experience Content -->
+        <div class="experience-container">
+          <!-- Experience Items -->
+          <div class="experience-item">
+            <img src="Square.jpg" alt="Microsoft" />
+            <!-- Experience image -->
+            <h2>Company</h2>
+            <!-- Company -->
+            <p>Role<br />x - x</p>
+            <!-- Role and date employed -->
+          </div>
+
+          <div class="experience-item">
+            <img src="Square.jpg" alt="TwoSigma" />
+            <h2>Company</h2>
+            <p>Role<br />x - x</p>
+          </div>
+
+          <div class="experience-item">
+            <img src="Square.jpg" alt="NYC DOT" />
+            <h2>Company</h2>
+            <p>Role<br />x - x</p>
+          </div>
+          <!-- Add other experiences here using the same structure -->
+        </div>
+      </div>
+
+      <!--Project Section -->
+      <div class="projects" id="projects">
+        <h1>Projects</h1>
+        <!-- Project Content -->
+        <div class="content">
+          <!-- Project Row 1 -->
+          <div class="project-row">
+            <a href="https://project.com" class="project">
+              <!-- Project Link -->
+              <img src="./Projects/Square.jpg" alt="Project 1 Image" />
+              <!-- Project Image -->
+              <h1>Project Name</h1>
+              <!-- Project Name -->
+              <!-- Project Description -->
+              <p>Short description of Project.</p>
+            </a>
+
+            <!-- Add other projects here using the same structure -->
+
+            <a href="https://project.com" class="project">
+              <img src="./Projects/Square.jpg" alt="Project 2 Image" />
+              <h1>Project Name</h1>
+              <p>Short description of Project.</p>
+            </a>
+          </div>
+
+          <!-- Project Row 2 -->
+          <div class="project-row">
+            <a href="https://project.com" class="project">
+              <img src="./Projects/Square.jpg" alt="Project 3 Image" />
+              <h1>Project Name</h1>
+              <p>Short description of Project.</p>
+            </a>
+
+            <a href="https://project.com" class="project">
+              <img src="./Projects/Square.jpg" alt="Project 4 Image" />
+              <h1>Project Name</h1>
+              <p>Short description of Project.</p>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Section -->
+      <div class="contact" id="contact">
+        <div class="content">
+          <h1>Contact Me</h1>
+          <!-- Contact Section title -->
+          <!-- Contact Section Description -->
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            <a href="mailto:youremail@email.com">youremail@email.com</a>
+          </p>
+
+          <!-- Social Media Links -->
+          <div class="social-icons">
+            <a href="https://www.linkedin.com/user/" target="_blank">
+              <img src="./SocialMedia/linkedin.png" alt="LinkedIn" />
+            </a>
+            <a href="https://github.com/user" target="_blank">
+              <img src="./SocialMedia/github.png" alt="GitHub" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Javascript for Navbar Background becoming transparent after you scrol -->
+    <script>
+      window.addEventListener("scroll", function () {
+        const navbar = document.querySelector(".navbar");
+        if (window.scrollY > 50) {
+          navbar.classList.add("scrolled");
+        } else {
+          navbar.classList.remove("scrolled");
+        }
+      });
+    </script>
+  </body>
+</html>
